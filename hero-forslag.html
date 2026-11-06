@@ -5,70 +5,74 @@
 <style>
 :root{--green:#0d3b2e;--green-d:#08271e;--green-m:#14513f;--mint:#7fd6a4;--sand:#f4f1ea}
 *{box-sizing:border-box;margin:0;padding:0}body{font-family:"Albert Sans",sans-serif;color:var(--green-d);background:#e9ece8}
-a{color:inherit;text-decoration:none}video,img{display:block;width:100%;height:100%;object-fit:cover}
-.intro{padding:72px 40px 40px;max-width:1286px;margin:0 auto}.intro h1{font-weight:400;font-size:56px;letter-spacing:-.02em;color:var(--green)}.intro p{font-size:19px;max-width:640px;margin-top:12px;color:#3a4c45}
+a{color:inherit;text-decoration:none}
+.intro{padding:72px 40px 40px;max-width:1286px;margin:0 auto}.intro h1{font-weight:400;font-size:56px;letter-spacing:-.02em;color:var(--green)}.intro p{font-size:19px;max-width:660px;margin-top:12px;color:#3a4c45}
 .intro nav{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}.intro nav a{border:1px solid var(--green);border-radius:99px;padding:8px 16px;font-weight:500}.intro nav a:hover{background:var(--green);color:#fff}
 .opt{margin:0 0 72px}.lab{max-width:1286px;margin:0 auto;padding:0 40px 16px;display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
 .lab b{font-size:14px;background:var(--green);color:#fff;border-radius:99px;padding:4px 12px}.lab h2{font-weight:500;font-size:26px;color:var(--green)}.lab span{color:#5a6a63}
-.frame{position:relative;height:100vh;min-height:640px;max-height:900px;overflow:hidden;background:#fff}
-.bar{position:absolute;z-index:5;top:0;left:0;right:0;height:64px;display:flex;align-items:center;gap:36px;padding:0 40px;font-size:16px}
+.frame{position:relative;height:100vh;min-height:640px;max-height:920px;overflow:hidden;color:#fff;background:var(--green-d)}
+.v{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ov{position:absolute;inset:0;z-index:1}
+.bar{position:absolute;z-index:5;top:0;left:0;right:0;height:64px;display:flex;align-items:center;gap:36px;padding:0 40px;font-size:16px;background:rgba(255,255,255,.92);color:var(--green)}
 .bar .lg{font-weight:700;font-size:26px;text-transform:uppercase;letter-spacing:.02em}.bar .sp{flex:1}.bar .pl{border:1px solid currentColor;border-radius:99px;padding:4px 14px}
-.bar.w{background:rgba(255,255,255,.92);color:var(--green)}.bar.t{color:#fff}
-.btn{display:inline-flex;gap:10px;align-items:center;background:var(--mint);color:var(--green-d);border-radius:99px;padding:14px 24px;font-weight:600}
-.btn.o{background:transparent;border:1px solid currentColor;color:inherit}
-h3.big{font-weight:400;letter-spacing:-.025em;line-height:1.02}
-/* 1 */
-.f1 .v{position:absolute;inset:0}.f1:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,39,30,.1) 35%,rgba(8,39,30,.8))}
-.f1 .in{position:absolute;z-index:2;left:40px;right:40px;bottom:48px;display:flex;justify-content:space-between;align-items:flex-end;gap:48px;color:#fff}
-.f1 h3{font-size:clamp(48px,7vw,96px);max-width:800px}.f1 p{font-size:21px;max-width:400px}
-/* 2 split */
-.f2{display:grid;grid-template-columns:1fr 1fr}.f2 .l{background:var(--green);color:#fff;padding:140px 64px 64px;display:flex;flex-direction:column;justify-content:flex-end;gap:28px}
-.f2 h3{font-size:clamp(44px,5.4vw,80px)}.f2 p{font-size:20px;opacity:.85;max-width:480px}.f2 .r{position:relative}
-.f2 .kp{display:flex;gap:40px;border-top:1px solid rgba(255,255,255,.2);padding-top:24px}.f2 .kp b{display:block;font-size:40px;font-weight:300;color:var(--mint)}
-/* 3 centered framed */
-.f3{background:var(--sand);display:flex;flex-direction:column;align-items:center;padding:120px 40px 0;text-align:center}
-.f3 h3{font-size:clamp(46px,6.4vw,92px);color:var(--green);max-width:1000px}.f3 p{font-size:20px;color:#3a4c45;max-width:620px;margin:22px 0 30px}
-.f3 .btn{background:var(--green);color:#fff}.f3 .vf{flex:1;width:100%;max-width:1200px;margin-top:48px;border-radius:24px 24px 0 0;overflow:hidden;min-height:260px}
-/* 4 slider tabs */
-.f4 .v{position:absolute;inset:0}.f4:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,39,30,.8),rgba(8,39,30,.1) 70%)}
-.f4 .in{position:absolute;z-index:2;left:40px;top:50%;transform:translateY(-55%);color:#fff;max-width:720px}.f4 .in small{color:var(--mint);font-weight:600;letter-spacing:.1em;text-transform:uppercase}
-.f4 h3{font-size:clamp(44px,6vw,84px);margin:14px 0 22px}.f4 p{font-size:20px;opacity:.9;margin-bottom:28px;max-width:520px}
-.f4 .tabs{position:absolute;z-index:3;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);color:#fff}
-.f4 .tabs div{padding:22px 40px 28px;border-top:2px solid rgba(255,255,255,.25);opacity:.6;font-size:15px}.f4 .tabs div.on{opacity:1;border-color:var(--mint)}.f4 .tabs b{display:block;font-size:19px;font-weight:500}
-/* 5 editorial */
-.f5{background:#fff;display:grid;grid-template-rows:auto 1fr;padding-top:64px}
-.f5 .top{display:grid;grid-template-columns:2fr 1fr;gap:48px;padding:56px 40px 40px;align-items:end}
-.f5 h3{font-size:clamp(52px,8.4vw,132px);color:var(--green)}.f5 p{font-size:19px;color:#3a4c45;margin-bottom:22px}
-.f5 .pan{position:relative;margin:0 40px 40px;overflow:hidden}.f5 .chip{position:absolute;right:24px;bottom:24px;background:#fff;color:var(--green);border-radius:16px;padding:18px 22px;max-width:300px}
-.f5 .chip small{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--green-m);text-transform:uppercase}.f5 .chip b{display:block;font-size:20px;font-weight:500;margin-top:4px}
-@media(max-width:900px){.bar a:not(.lg):not(.pl){display:none}.f1 .in{flex-direction:column;align-items:flex-start;left:16px;right:16px}.f2,.f5 .top{grid-template-columns:1fr}.f2 .l{padding:100px 24px 40px}.f2 .r{min-height:300px}.f4 .tabs{grid-template-columns:1fr 1fr}.f4 .in{left:16px;right:16px}.f5 .pan{margin:0 16px 16px}.lab,.intro{padding-left:16px;padding-right:16px}}
+.c{position:absolute;z-index:3}
+h3{font-weight:400;letter-spacing:-.025em;line-height:1.02}
+.btn{display:inline-flex;gap:10px;align-items:center;background:var(--mint);color:var(--green-d);border-radius:99px;padding:14px 24px;font-weight:600;font-size:16px}
+.btn.o{background:transparent;border:1px solid #fff;color:#fff}
+.eb{font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
+/* 1 bottom left/right */
+.f1 .ov{background:linear-gradient(180deg,rgba(8,39,30,.05) 35%,rgba(8,39,30,.8))}
+.f1 .c{left:40px;right:40px;bottom:48px;display:flex;justify-content:space-between;align-items:flex-end;gap:48px}
+.f1 h3{font-size:clamp(48px,7vw,100px);max-width:820px}.f1 p{font-size:21px;max-width:400px}
+/* 2 centered */
+.f2 .ov{background:radial-gradient(ellipse at center,rgba(8,39,30,.55),rgba(8,39,30,.25) 70%)}
+.f2 .c{inset:64px 40px 0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:24px}
+.f2 h3{font-size:clamp(50px,7.6vw,112px);max-width:1100px}.f2 p{font-size:21px;max-width:600px;opacity:.92}
+.f2 .row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.f2 .scroll{position:absolute;z-index:3;bottom:32px;left:50%;transform:translateX(-50%);font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+/* 3 glass card left */
+.f3 .ov{background:linear-gradient(90deg,rgba(8,39,30,.35),transparent 60%)}
+.f3 .c{left:40px;top:50%;transform:translateY(-40%);width:min(560px,calc(100% - 32px));background:rgba(8,39,30,.55);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.15);border-radius:24px;padding:44px}
+.f3 h3{font-size:clamp(40px,4.6vw,64px);margin:14px 0 18px}.f3 p{font-size:19px;opacity:.9;margin-bottom:28px}
+.f3 .kp{display:flex;gap:32px;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.2)}.f3 .kp b{display:block;font-size:34px;font-weight:300;color:var(--mint)}.f3 .kp span{font-size:14px;opacity:.8}
+/* 4 top-left + bottom KPI bar */
+.f4 .ov{background:linear-gradient(180deg,rgba(8,39,30,.75),rgba(8,39,30,.05) 55%,rgba(8,39,30,.6))}
+.f4 .c.t{left:40px;top:120px;max-width:900px}.f4 h3{font-size:clamp(46px,6.4vw,92px);margin:16px 0 24px}.f4 p{font-size:20px;max-width:520px;opacity:.92}
+.f4 .c.b{left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.25);background:rgba(8,39,30,.35);backdrop-filter:blur(10px)}
+.f4 .c.b div{padding:26px 40px 30px;border-right:1px solid rgba(255,255,255,.15)}.f4 .c.b b{display:block;font-size:42px;font-weight:300;color:var(--mint);line-height:1}.f4 .c.b span{font-size:15px;opacity:.85}
+/* 5 huge type bottom + chip top right */
+.f5 .ov{background:linear-gradient(0deg,rgba(8,39,30,.85),transparent 50%)}
+.f5 .c.b{left:40px;right:40px;bottom:36px}.f5 h3{font-size:clamp(64px,13vw,210px);letter-spacing:-.045em;line-height:.88}
+.f5 .c.b .row{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:28px;border-top:1px solid rgba(255,255,255,.25);padding-top:22px;font-size:18px}
+.f5 .chip{right:40px;top:96px;background:#fff;color:var(--green);border-radius:18px;padding:18px 22px;max-width:300px;display:flex;gap:14px;align-items:center}
+.f5 .chip i{width:10px;height:10px;border-radius:50%;background:#e04b3c;box-shadow:0 0 0 6px rgba(224,75,60,.2);flex:none}
+.f5 .chip small{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--green-m);text-transform:uppercase}.f5 .chip b{display:block;font-size:18px;font-weight:500}
+@media(max-width:900px){.bar a:not(.lg):not(.pl){display:none}.bar{padding:0 16px}.f1 .c{flex-direction:column;align-items:flex-start;left:16px;right:16px}.f3 .c{left:16px;padding:28px}.f4 .c.t{left:16px;right:16px}.f4 .c.b{grid-template-columns:1fr 1fr}.f4 .c.b div{padding:18px 16px}.f5 .c.b{left:16px;right:16px}.f5 .c.b .row{flex-direction:column;align-items:flex-start}.f5 .chip{right:16px}.lab,.intro{padding-left:16px;padding-right:16px}}
 </style></head><body>
-<div class="intro"><h1>Fem förslag på hero</h1><p>Samma video och samma koncernkänsla – fem olika sätt att möta besökaren. Alla förslag kan bytas in direkt på startsidan.</p>
-<nav><a href="#h1">1. Fullbild</a><a href="#h2">2. Split</a><a href="#h3">3. Centrerad ram</a><a href="#h4">4. Bildspel med flikar</a><a href="#h5">5. Editorial</a><a href="index.html">← Till startsidan</a></nav></div>
+<div class="intro"><h1>Fem förslag på hero</h1><p>Alla förslag har drönarvideo i helbild bakom – det som skiljer är textens placering, hierarki och detaljer. Tre olika drönarfilmer används.</p>
+<nav><a href="#h1">1. Nere vänster</a><a href="#h2">2. Centrerad</a><a href="#h3">3. Glaskort</a><a href="#h4">4. Topp + nyckeltal</a><a href="#h5">5. Jättetypografi</a><a href="index.html">← Till startsidan</a></nav></div>
 
-<div class="opt" id="h1"><div class="lab"><b>01</b><h2>Fullbild – klassisk koncern</h2><span>Video över hela skärmen, rubrik nere till vänster och ingress till höger. Nuvarande lösning.</span></div>
-<div class="frame f1"><div class="bar w"><span class="lg">Nordbild</span><a>Verksamhet</a><a>Projekt</a><a>Hållbarhet</a><a>Karriär</a><span class="sp"></span><a class="pl">Kontakt</a></div>
-<video class="v" autoplay muted loop playsinline poster="assets/hero-poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video>
-<div class="in"><h3 class="big">Grunden för ett starkare Sverige</h3><p>Vi utvecklar, bygger och förvaltar byggnader och infrastruktur i hela landet.</p></div></div></div>
+<div class="opt" id="h1"><div class="lab"><b>01</b><h2>Nere vänster – klassisk koncern</h2><span>Video 1: Stockholm från ovan. Rubrik nere till vänster, ingress nere till höger.</span></div>
+<div class="frame f1"><div class="bar"><span class="lg">Nordbild</span><a>Verksamhet</a><a>Projekt</a><a>Hållbarhet</a><a>Karriär</a><span class="sp"></span><a class="pl">Kontakt</a></div><video class="v" autoplay muted loop playsinline poster="assets/hero-poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video><div class="ov"></div>
+<div class="c"><h3>Grunden för ett starkare Sverige</h3><p>Vi utvecklar, bygger och förvaltar byggnader och infrastruktur i hela landet.</p></div></div></div>
 
-<div class="opt" id="h2"><div class="lab"><b>02</b><h2>Split 50/50</h2><span>Grön textpanel med nyckeltal till vänster, video till höger. Tydlig och lättläst – bra för budskap och siffror.</span></div>
-<div class="frame f2"><div class="bar t"><span class="lg">Nordbild</span><a>Verksamhet</a><a>Projekt</a><a>Hållbarhet</a><span class="sp"></span><a class="pl">Kontakt</a></div>
-<div class="l"><h3 class="big">Vi bygger det som bär Sverige framåt</h3><p>Från förskolor och bostäder till broar och vindkraft – med ansvar för varje steg.</p><div><a class="btn">Upptäck vår verksamhet →</a></div><div class="kp"><div><b>9 400</b>medarbetare</div><div><b>1 200</b>projekt</div><div><b>2040</b>netto noll</div></div></div>
-<div class="r"><video autoplay muted loop playsinline poster="assets/hero-poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video></div></div></div>
+<div class="opt" id="h2"><div class="lab"><b>02</b><h2>Centrerad</h2><span>Video 2: höghusbygge med kran. Rubrik och knappar mitt i bild – starkt och symmetriskt.</span></div>
+<div class="frame f2"><div class="bar"><span class="lg">Nordbild</span><a>Verksamhet</a><a>Projekt</a><a>Hållbarhet</a><a>Karriär</a><span class="sp"></span><a class="pl">Kontakt</a></div><video class="v" autoplay muted loop playsinline poster="assets/hero-2-poster.jpg"><source src="assets/hero-2.mp4" type="video/mp4"></video><div class="ov"></div>
+<div class="c"><div class="eb">Bygg · Infrastruktur · Fastigheter</div><h3>Vi bygger det som bär Sverige</h3><p>Från förskolor och bostäder till broar och vindkraft – med ansvar i varje steg.</p><div class="row"><a class="btn">Upptäck vår verksamhet →</a><a class="btn o">Se projekt</a></div></div>
+<div class="scroll">Scrolla ↓</div></div></div>
 
-<div class="opt" id="h3"><div class="lab"><b>03</b><h2>Centrerad rubrik med inramad video</h2><span>Lugn sandbakgrund, rubriken i centrum och videon som en rundad panel som växer fram underifrån.</span></div>
-<div class="frame f3"><div class="bar w" style="background:transparent"><span class="lg">Nordbild</span><a>Verksamhet</a><a>Projekt</a><a>Hållbarhet</a><span class="sp"></span><a class="pl">Kontakt</a></div>
-<h3 class="big">Hundra år av samhällsbyggande</h3><p>Nordbild skapar platser där människor bor, arbetar och möts – i generationer.</p><a class="btn">Se våra projekt →</a>
-<div class="vf"><video autoplay muted loop playsinline poster="assets/hero-poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video></div></div></div>
+<div class="opt" id="h3"><div class="lab"><b>03</b><h2>Glaskort till vänster</h2><span>Video 3: stort byggområde från ovan. Texten i ett frostat kort med nyckeltal – videon syns fritt till höger.</span></div>
+<div class="frame f3"><div class="bar"><span class="lg">Nordbild</span><a>Verksamhet</a><a>Projekt</a><a>Hållbarhet</a><a>Karriär</a><span class="sp"></span><a class="pl">Kontakt</a></div><video class="v" autoplay muted loop playsinline poster="assets/hero-3-poster.jpg"><source src="assets/hero-3.mp4" type="video/mp4"></video><div class="ov"></div>
+<div class="c"><div class="eb">Nordbild sedan 1924</div><h3>Hundra år av samhällsbyggande</h3><p>Vi skapar platser där människor bor, arbetar och möts – i generationer.</p><a class="btn">Om Nordbild →</a>
+<div class="kp"><div><b>9 400</b><span>medarbetare</span></div><div><b>1 200</b><span>projekt</span></div><div><b>2040</b><span>netto noll</span></div></div></div></div></div>
 
-<div class="opt" id="h4"><div class="lab"><b>04</b><h2>Bildspel med flikar</h2><span>Rubrik i mitten till vänster och fyra flikar längst ned som lyfter projekt och nyheter. Passar när mycket händer.</span></div>
-<div class="frame f4"><div class="bar t"><span class="lg">Nordbild</span><a>Verksamhet</a><a>Projekt</a><a>Hållbarhet</a><span class="sp"></span><a class="pl">Kontakt</a></div>
-<video class="v" autoplay muted loop playsinline poster="assets/hero-poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video>
-<div class="in"><small>Renovering · Stockholm</small><h3 class="big">Kulturarvet som ska hålla i hundra år till</h3><p>Så renoverar vi 1600-talsfastigheter med traditionellt hantverk och modern teknik.</p><a class="btn">Läs reportaget →</a></div>
-<div class="tabs"><div class="on"><b>Kv. Riddaren</b>Renovering</div><div><b>Älvstranden</b>420 nya hem</div><div><b>Granberget</b>Vindkraft 260 MW</div><div><b>Hagastaden</b>Kontor 16 vån.</div></div></div></div>
+<div class="opt" id="h4"><div class="lab"><b>04</b><h2>Rubrik uppe + nyckeltalsrad</h2><span>Video 1. Rubriken direkt under menyn och en frostad rad med fyra nyckeltal längst ned.</span></div>
+<div class="frame f4"><div class="bar"><span class="lg">Nordbild</span><a>Verksamhet</a><a>Projekt</a><a>Hållbarhet</a><a>Karriär</a><span class="sp"></span><a class="pl">Kontakt</a></div><video class="v" autoplay muted loop playsinline poster="assets/hero-poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video><div class="ov"></div>
+<div class="c t"><div class="eb">Ett av Sveriges ledande byggbolag</div><h3>Vi formar städerna där Sverige växer</h3><p>Bygg, infrastruktur och fastigheter – från Malmö till Kiruna.</p></div>
+<div class="c b"><div><b>9 400</b><span>medarbetare</span></div><div><b>48 mdr</b><span>omsättning</span></div><div><b>1 200</b><span>pågående projekt</span></div><div style="border:0"><b>2040</b><span>netto noll</span></div></div></div></div>
 
-<div class="opt" id="h5"><div class="lab"><b>05</b><h2>Editorial – stor typografi</h2><span>Jättestor rubrik på vitt och videon i en panel under. Modernt och självsäkert, med en flytande projektlapp.</span></div>
-<div class="frame f5"><div class="bar w"><span class="lg">Nordbild</span><a>Verksamhet</a><a>Projekt</a><a>Hållbarhet</a><span class="sp"></span><a class="pl">Kontakt</a></div>
-<div class="top"><h3 class="big">Vi bygger Sverige.</h3><div><p>Bygg, infrastruktur och fastigheter – med 9 400 medarbetare från Malmö till Kiruna.</p><a class="btn" style="background:var(--green);color:#fff">Om Nordbild →</a></div></div>
-<div class="pan"><video autoplay muted loop playsinline poster="assets/hero-poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video><div class="chip"><small>Aktuellt projekt</small><b>Kv. Riddaren, Stockholm</b></div></div></div></div>
+<div class="opt" id="h5"><div class="lab"><b>05</b><h2>Jättetypografi i botten</h2><span>Video 2. En enorm rubrik över hela bredden och en "live"-lapp om aktuellt projekt uppe till höger.</span></div>
+<div class="frame f5"><div class="bar"><span class="lg">Nordbild</span><a>Verksamhet</a><a>Projekt</a><a>Hållbarhet</a><a>Karriär</a><span class="sp"></span><a class="pl">Kontakt</a></div><video class="v" autoplay muted loop playsinline poster="assets/hero-2-poster.jpg"><source src="assets/hero-2.mp4" type="video/mp4"></video><div class="ov"></div>
+<div class="c chip"><i></i><div><small>Pågår just nu</small><b>Hagastaden Norra, 16 våningar</b></div></div>
+<div class="c b"><h3>Vi bygger<br>Sverige.</h3><div class="row"><span>Bygg, infrastruktur och fastigheter sedan 1924.</span><a class="btn">Upptäck Nordbild →</a></div></div></div></div>
 </body></html>
