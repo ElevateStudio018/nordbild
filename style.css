@@ -25,8 +25,8 @@ header.hide{transform:translateY(-100%)}
 @keyframes zoom{to{transform:scale(1)}}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,39,30,.15) 30%,rgba(8,39,30,.8))}
 .hero .in{position:absolute;z-index:2;left:40px;right:40px;bottom:48px;display:flex;justify-content:space-between;align-items:flex-end;gap:60px}
-.hero h1{font-weight:400;font-size:clamp(48px,7vw,96px);line-height:1.02;letter-spacing:-.02em;max-width:820px}
-.hero p{font-size:22px;max-width:400px;font-weight:400}
+.hero h1{font-weight:400;font-size:clamp(56px,8.6vw,132px);line-height:.98;letter-spacing:-.03em;max-width:1000px}
+.hero p{font-size:20px;max-width:400px;font-weight:400;opacity:.92}
 /* sections */
 section{padding:120px 0}
 .eyebrow{font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--green-m);font-weight:600;margin-bottom:16px}
@@ -170,3 +170,4 @@ form.contact .full{grid-column:1/-1}
 .hbtn{display:inline-flex;align-items:center;gap:10px;background:var(--mint);color:var(--green-d);border-radius:99px;padding:14px 24px;font-weight:600;font-size:16px;transition:.25s}
 .hbtn span{transition:.25s}.hbtn:hover{background:#fff}.hbtn:hover span{transform:translateX(4px)}
 .hbtn.o{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.8)}.hbtn.o:hover{background:#fff;color:var(--green-d)}
+.feature .eyebrow{color:var(--mint)}
