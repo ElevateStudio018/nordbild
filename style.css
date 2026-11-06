@@ -165,3 +165,8 @@ form.contact .full{grid-column:1/-1}
 .hv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 @media(max-width:1000px){.prose,.grid3,.pgrid,form.contact,.offices{grid-template-columns:1fr}.prose aside{position:static}.jobs a{grid-template-columns:1fr;gap:4px}.cta .wrap{flex-direction:column;align-items:flex-start}.sub .in{left:16px;right:16px}}
 .sand .box{background:#fff}
+.hero .hr{display:flex;flex-direction:column;gap:28px;max-width:420px}
+.hb{display:flex;gap:12px;flex-wrap:wrap}
+.hbtn{display:inline-flex;align-items:center;gap:10px;background:var(--mint);color:var(--green-d);border-radius:99px;padding:14px 24px;font-weight:600;font-size:16px;transition:.25s}
+.hbtn span{transition:.25s}.hbtn:hover{background:#fff}.hbtn:hover span{transform:translateX(4px)}
+.hbtn.o{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.8)}.hbtn.o:hover{background:#fff;color:var(--green-d)}
