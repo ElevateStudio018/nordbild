@@ -7,129 +7,21 @@
 <meta name="description" content="Nordbild utvecklar, bygger och förvaltar byggnader och infrastruktur i hela Sverige.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--green:#0d3b2e;--green-d:#08271e;--green-m:#14513f;--mint:#7fd6a4;--sand:#f4f1ea;--ink:#0b1f19;--line:#d9ddd6;--w:1286px}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:"Albert Sans",system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.5;-webkit-font-smoothing:antialiased}
-img{display:block;width:100%;height:100%;object-fit:cover}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--w);margin:0 auto;padding:0 40px}
-/* header */
-header{position:fixed;inset:0 0 auto;height:64px;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);transition:transform .3s}
-header.hide{transform:translateY(-100%)}
-.nav{height:64px;display:flex;align-items:center;gap:40px;padding:0 40px}
-.logo{font-weight:700;font-size:30px;letter-spacing:.02em;color:var(--green);display:flex;align-items:center;gap:10px;text-transform:uppercase}
-.logo svg{width:30px;height:30px}
-.menu{display:flex;gap:40px;flex:1;font-size:17px;color:var(--green)}
-.menu a{position:relative}.menu a:after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:currentColor;transform:scaleX(0);transition:.25s;transform-origin:left}
-.menu a:hover:after{transform:scaleX(1)}
-.pill{border:1px solid var(--green);border-radius:99px;padding:5px 15px;color:var(--green);font-size:17px;transition:.2s}
-.pill:hover{background:var(--green);color:#fff}
-.icon{width:26px;height:26px;color:var(--green)}
-.burger{display:none;background:none;border:0;cursor:pointer}
-/* hero */
-.hero{position:relative;height:100vh;min-height:640px;color:#fff;overflow:hidden}
-.hero img{position:absolute;inset:0;transform:scale(1.06);animation:zoom 14s ease-out forwards}
-@keyframes zoom{to{transform:scale(1)}}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,39,30,.15) 30%,rgba(8,39,30,.8))}
-.hero .in{position:absolute;z-index:2;left:40px;right:40px;bottom:48px;display:flex;justify-content:space-between;align-items:flex-end;gap:60px}
-.hero h1{font-weight:400;font-size:clamp(48px,7vw,96px);line-height:1.02;letter-spacing:-.02em;max-width:820px}
-.hero p{font-size:22px;max-width:400px;font-weight:400}
-/* sections */
-section{padding:120px 0}
-.eyebrow{font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--green-m);font-weight:600;margin-bottom:16px}
-h2{font-weight:400;font-size:clamp(40px,5vw,72px);line-height:1.05;letter-spacing:-.02em;color:var(--green)}
-.split{display:grid;grid-template-columns:1.4fr 1fr;gap:80px;align-items:end;margin-bottom:64px}
-.split p{font-size:20px;color:#2a3d36}
-.arrow{display:inline-flex;align-items:center;gap:14px;font-size:18px;color:var(--green);font-weight:500}
-.arrow i{width:34px;height:34px;border-radius:50%;background:var(--mint);display:grid;place-items:center;transition:.25s;font-style:normal}
-.arrow:hover i{transform:translateX(6px)}
-/* cards */
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.card{position:relative;aspect-ratio:3/4;overflow:hidden;color:#fff;border-radius:2px}
-.card img{transition:transform .7s}
-.card:hover img{transform:scale(1.06)}
-.card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(8,39,30,.85))}
-.card div{position:absolute;z-index:2;left:28px;right:28px;bottom:28px}
-.card h3{font-size:30px;font-weight:500;margin-bottom:6px}
-.card span{font-size:16px;opacity:.85}
-/* stats */
-.dark{background:var(--green);color:#fff}
-.dark h2{color:#fff}.dark .eyebrow{color:var(--mint)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.2);margin-top:64px}
-.stat{padding:36px 30px 0 0}
-.stat b{display:block;font-size:clamp(48px,5vw,76px);font-weight:300;line-height:1;color:var(--mint)}
-.stat span{font-size:18px;opacity:.85}
-/* feature */
-.feature{display:grid;grid-template-columns:1fr 1fr;min-height:720px}
-.feature .img{overflow:hidden}
-.feature .txt{background:var(--green-d);color:#fff;padding:100px 80px;display:flex;flex-direction:column;justify-content:center;gap:28px}
-.feature .txt h2{color:#fff}
-.feature .txt p{font-size:20px;opacity:.85;max-width:520px}
-.feature .arrow{color:#fff}
-/* projects */
-.proj{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:380px 380px;gap:24px}
-.proj a:first-child{grid-row:span 2}
-.proj a{position:relative;overflow:hidden;color:#fff}
-.proj a img{transition:transform .7s}.proj a:hover img{transform:scale(1.05)}
-.proj a:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(8,39,30,.85))}
-.proj .t{position:absolute;z-index:2;left:28px;bottom:26px;right:28px}
-.proj .t small{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--mint)}
-.proj .t h3{font-size:28px;font-weight:500}
-/* banner */
-.banner{position:relative;margin:0 40px;height:660px;overflow:hidden;color:#fff}
-.banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,39,30,.85),transparent 70%)}
-.banner .t{position:absolute;z-index:2;left:48px;bottom:56px;max-width:560px}
-.banner h3{font-size:clamp(28px,3vw,40px);font-weight:500;line-height:1.15;margin-bottom:24px}
-.banner .arrow{color:#fff}
-/* news */
-.news{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.news a .im{aspect-ratio:4/3;overflow:hidden;margin-bottom:20px}
-.news a img{transition:transform .6s}.news a:hover img{transform:scale(1.05)}
-.news small{color:var(--green-m);font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
-.news h3{font-size:24px;font-weight:500;line-height:1.25;margin-top:8px;color:var(--green)}
-.sand{background:var(--sand)}
-/* footer */
-footer{background:var(--green-d);color:#fff;padding:96px 0 40px}
-.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:64px;border-bottom:1px solid rgba(255,255,255,.15)}
-.fgrid h4{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--mint);margin-bottom:18px;font-weight:600}
-.fgrid li{list-style:none;margin-bottom:10px;opacity:.85}.fgrid li a:hover{opacity:1;text-decoration:underline}
-.fgrid p{font-size:28px;font-weight:300;line-height:1.2;max-width:360px}
-.fbot{display:flex;justify-content:space-between;padding-top:32px;font-size:14px;opacity:.7;gap:20px;flex-wrap:wrap}
-.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s}
-.reveal.on{opacity:1;transform:none}
-@media(max-width:1000px){
- .menu,.nav .pill,.nav .search{display:none}.burger{display:block;margin-left:auto}
- .menu.open{display:flex;position:fixed;top:64px;left:0;right:0;flex-direction:column;background:#fff;padding:32px 24px;gap:24px;font-size:24px}
- .nav,.wrap{padding:0 16px}.hero .in{left:16px;right:16px;flex-direction:column;align-items:flex-start;gap:24px}
- .split,.feature,.proj,.fgrid{grid-template-columns:1fr}.cards,.stats{grid-template-columns:1fr 1fr}.news{grid-template-columns:1fr}
- .proj{grid-template-rows:auto}.proj a{height:320px}.proj a:first-child{grid-row:auto}
- .feature .txt{padding:64px 24px}.feature .img{height:420px}.banner{margin:0 16px;height:520px}.banner .t{left:24px;right:24px}
- section{padding:80px 0}.split{gap:24px}
-}
-@media(max-width:560px){.cards{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.hero p{font-size:18px}}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header id="hdr">
  <nav class="nav">
-  <a class="logo" href="#"><svg viewBox="0 0 32 32" fill="none"><path d="M3 28V10l13-7 13 7v18" stroke="currentColor" stroke-width="3"/><path d="M11 28V17h10v11" stroke="currentColor" stroke-width="3"/></svg>Nordbild</a>
-  <div class="menu" id="menu">
-   <a href="#verksamhet">Bygg &amp; infrastruktur</a>
-   <a href="#projekt">Projekt</a>
-   <a href="#hallbarhet">Hållbarhet</a>
-   <a href="#karriar">Jobba hos oss</a>
-   <a href="#nyheter">Nyheter</a>
-  </div>
-  <a class="pill" href="#kontakt">Kontakt</a>
+  <a class="logo" href="index.html"><svg viewBox="0 0 32 32" fill="none"><path d="M3 28V10l13-7 13 7v18" stroke="currentColor" stroke-width="3"/><path d="M11 28V17h10v11" stroke="currentColor" stroke-width="3"/></svg>Nordbild</a>
+  <div class="menu" id="menu"><a href="verksamhet.html">Bygg &amp; infrastruktur</a><a href="projekt.html">Projekt</a><a href="hallbarhet.html">Hållbarhet</a><a href="karriar.html">Jobba hos oss</a><a href="nyheter.html">Nyheter</a></div>
+  <a class="pill" href="kontakt.html">Kontakt</a>
   <svg class="icon search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg>
   <button class="burger" aria-label="Meny" onclick="document.getElementById('menu').classList.toggle('open')"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
  </nav>
 </header>
 
 <section class="hero" style="padding:0">
- <img src="https://images.pexels.com/photos/19391718/pexels-photo-19391718.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Stockholms stadssiluett vid vattnet">
+ <video class="hv" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video>
  <div class="in">
   <h1>Grunden för ett starkare Sverige</h1>
   <p>Nordbild utvecklar, bygger och förvaltar byggnader och infrastruktur – med omtanke om människor, klimat och kommande generationer.</p>
@@ -143,10 +35,10 @@ footer{background:var(--green-d);color:#fff;padding:96px 0 40px}
    <p>Med 9 400 medarbetare och verksamhet från Malmö till Kiruna tar vi ansvar för hela kedjan – projektutveckling, byggnation och långsiktig förvaltning.</p>
   </div>
   <div class="cards">
-   <a class="card reveal" href="#"><img src="https://images.pexels.com/photos/34637957/pexels-photo-34637957.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Husbygge med tornkran"><div><h3>Bygg</h3><span>Kontor, skolor, sjukhus och industri</span></div></a>
-   <a class="card reveal" href="#"><img src="https://images.pexels.com/photos/5923872/pexels-photo-5923872.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Järnvägsspår i Göteborg"><div><h3>Infrastruktur</h3><span>Väg, järnväg, broar och energi</span></div></a>
-   <a class="card reveal" href="#"><img src="https://images.pexels.com/photos/19391640/pexels-photo-19391640.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Fastighet i Stockholm"><div><h3>Fastigheter</h3><span>Hållbara kommersiella lokaler</span></div></a>
-   <a class="card reveal" href="#"><img src="https://images.pexels.com/photos/5505119/pexels-photo-5505119.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Bostadsbygge"><div><h3>Bostäder</h3><span>Hem för livets alla skeden</span></div></a>
+   <a class="card reveal" href="bygg.html"><img src="https://images.pexels.com/photos/34637957/pexels-photo-34637957.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Husbygge med tornkran"><div><h3>Bygg</h3><span>Kontor, skolor, sjukhus och industri</span></div></a>
+   <a class="card reveal" href="infrastruktur.html"><img src="https://images.pexels.com/photos/5923872/pexels-photo-5923872.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Järnvägsspår i Göteborg"><div><h3>Infrastruktur</h3><span>Väg, järnväg, broar och energi</span></div></a>
+   <a class="card reveal" href="fastigheter.html"><img src="https://images.pexels.com/photos/19391640/pexels-photo-19391640.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Fastighet i Stockholm"><div><h3>Fastigheter</h3><span>Hållbara kommersiella lokaler</span></div></a>
+   <a class="card reveal" href="bostader.html"><img src="https://images.pexels.com/photos/5505119/pexels-photo-5505119.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Bostadsbygge"><div><h3>Bostäder</h3><span>Hem för livets alla skeden</span></div></a>
   </div>
  </div>
 </section>
@@ -168,12 +60,12 @@ footer{background:var(--green-d);color:#fff;padding:96px 0 40px}
  <div class="wrap">
   <div class="split reveal">
    <div><div class="eyebrow">Utvalda projekt</div><h2>Projekt som formar framtiden</h2></div>
-   <a class="arrow" href="#">Se alla projekt <i>→</i></a>
+   <a class="arrow" href="projekt.html">Se alla projekt <i>→</i></a>
   </div>
   <div class="proj reveal">
-   <a href="#"><img src="https://images.pexels.com/photos/34911458/pexels-photo-34911458.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Höghus under byggnation i skymning"><div class="t"><small>Göteborg · Bostäder</small><h3>Kvarteret Älvstranden – 420 nya hem vid vattnet</h3></div></a>
-   <a href="#"><img src="https://images.pexels.com/photos/33488902/pexels-photo-33488902.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Mobilkranar på byggarbetsplats"><div class="t"><small>Norrland · Energi</small><h3>Vindpark Granberget</h3></div></a>
-   <a href="#"><img src="https://images.pexels.com/photos/18399899/pexels-photo-18399899.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Tornkran"><div class="t"><small>Stockholm · Kontor</small><h3>Hagastaden Norra</h3></div></a>
+   <a href="projekt-alvstranden.html"><img src="https://images.pexels.com/photos/34911458/pexels-photo-34911458.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Höghus under byggnation i skymning"><div class="t"><small>Göteborg · Bostäder</small><h3>Kvarteret Älvstranden – 420 nya hem vid vattnet</h3></div></a>
+   <a href="projekt-granberget.html"><img src="https://images.pexels.com/photos/33488902/pexels-photo-33488902.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Mobilkranar på byggarbetsplats"><div class="t"><small>Norrland · Energi</small><h3>Vindpark Granberget</h3></div></a>
+   <a href="projekt-hagastaden.html"><img src="https://images.pexels.com/photos/18399899/pexels-photo-18399899.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Tornkran"><div class="t"><small>Stockholm · Kontor</small><h3>Hagastaden Norra</h3></div></a>
   </div>
  </div>
 </section>
@@ -184,7 +76,7 @@ footer{background:var(--green-d);color:#fff;padding:96px 0 40px}
   <div class="eyebrow">Hållbarhet</div>
   <h2>Klimatsmart byggande är inte ett val – det är vår standard</h2>
   <p>Vi minskar klimatavtrycket med fossilfria arbetsplatser, cirkulära material och energieffektiva byggnader. Målet: netto noll i hela värdekedjan till 2040.</p>
-  <a class="arrow" href="#">Läs om vårt klimatarbete <i style="color:var(--green)">→</i></a>
+  <a class="arrow" href="hallbarhet.html">Läs om vårt klimatarbete <i style="color:var(--green)">→</i></a>
  </div>
 </div>
 
@@ -193,7 +85,7 @@ footer{background:var(--green-d);color:#fff;padding:96px 0 40px}
   <img src="https://images.pexels.com/photos/34637957/pexels-photo-34637957.jpeg?auto=compress&cs=tinysrgb&w=2000" alt="Byggarbetsplats">
   <div class="t">
    <h3>Vill du vara med och bygga Sverige? Vi söker ingenjörer, yrkesarbetare och ledare över hela landet.</h3>
-   <a class="arrow" href="#">Se lediga jobb <i style="color:var(--green)">→</i></a>
+   <a class="arrow" href="karriar.html">Se lediga jobb <i style="color:var(--green)">→</i></a>
   </div>
  </div>
 </section>
@@ -205,9 +97,9 @@ footer{background:var(--green-d);color:#fff;padding:96px 0 40px}
    <p>Här samlar vi nyheter, reportage och insikter från våra projekt och vår bransch.</p>
   </div>
   <div class="news">
-   <a class="reveal" href="#"><div class="im"><img src="https://images.pexels.com/photos/5505119/pexels-photo-5505119.jpeg?auto=compress&cs=tinysrgb&w=900" alt=""></div><small>Pressmeddelande · 4 nov 2026</small><h3>Nordbild tecknar avtal om 280 bostäder i Uppsala</h3></a>
-   <a class="reveal" href="#"><div class="im"><img src="https://images.pexels.com/photos/19391718/pexels-photo-19391718.jpeg?auto=compress&cs=tinysrgb&w=900" alt=""></div><small>Reportage · 28 okt 2026</small><h3>Så renoverar vi kulturhistoriska fastigheter i Gamla stan</h3></a>
-   <a class="reveal" href="#"><div class="im"><img src="https://images.pexels.com/photos/18399899/pexels-photo-18399899.jpeg?auto=compress&cs=tinysrgb&w=900" alt=""></div><small>Hållbarhet · 15 okt 2026</small><h3>Första helt elektrifierade byggarbetsplatsen i Norden</h3></a>
+   <a class="reveal" href="nyhet-uppsala.html"><div class="im"><img src="https://images.pexels.com/photos/5505119/pexels-photo-5505119.jpeg?auto=compress&cs=tinysrgb&w=900" alt=""></div><small>Pressmeddelande · 4 nov 2026</small><h3>Nordbild tecknar avtal om 280 bostäder i Uppsala</h3></a>
+   <a class="reveal" href="nyhet-gamla-stan.html"><div class="im"><img src="https://images.pexels.com/photos/19391718/pexels-photo-19391718.jpeg?auto=compress&cs=tinysrgb&w=900" alt=""></div><small>Reportage · 28 okt 2026</small><h3>Så renoverar vi kulturhistoriska fastigheter i Gamla stan</h3></a>
+   <a class="reveal" href="nyhet-elektrifierad.html"><div class="im"><img src="https://images.pexels.com/photos/18399899/pexels-photo-18399899.jpeg?auto=compress&cs=tinysrgb&w=900" alt=""></div><small>Hållbarhet · 15 okt 2026</small><h3>Första helt elektrifierade byggarbetsplatsen i Norden</h3></a>
   </div>
  </div>
 </section>
@@ -215,23 +107,15 @@ footer{background:var(--green-d);color:#fff;padding:96px 0 40px}
 <footer id="kontakt">
  <div class="wrap">
   <div class="fgrid">
-   <div><a class="logo" style="color:#fff;margin-bottom:24px" href="#">Nordbild</a><p>Grunden för ett starkare Sverige.</p></div>
-   <div><h4>Verksamhet</h4><ul><li><a href="#">Bygg</a></li><li><a href="#">Infrastruktur</a></li><li><a href="#">Fastigheter</a></li><li><a href="#">Bostäder</a></li></ul></div>
-   <div><h4>Om oss</h4><ul><li><a href="#">Hållbarhet</a></li><li><a href="#">Investerare</a></li><li><a href="#">Press</a></li><li><a href="#">Jobba hos oss</a></li></ul></div>
-   <div><h4>Kontakt</h4><ul><li>Nordbild AB</li><li>Sveavägen 120, Stockholm</li><li><a href="tel:+46101234500">010-123 45 00</a></li><li><a href="mailto:info@nordbild.se">info@nordbild.se</a></li></ul></div>
+   <div><a class="logo" style="color:#fff;margin-bottom:24px" href="index.html">Nordbild</a><p>Grunden för ett starkare Sverige.</p></div>
+   <div><h4>Verksamhet</h4><ul><li><a href="bygg.html">Bygg</a></li><li><a href="infrastruktur.html">Infrastruktur</a></li><li><a href="fastigheter.html">Fastigheter</a></li><li><a href="bostader.html">Bostäder</a></li></ul></div>
+   <div><h4>Om oss</h4><ul><li><a href="om-oss.html">Om Nordbild</a></li><li><a href="hallbarhet.html">Hållbarhet</a></li><li><a href="nyheter.html">Press &amp; nyheter</a></li><li><a href="karriar.html">Jobba hos oss</a></li></ul></div>
+   <div><h4>Kontakt</h4><ul><li>Nordbild AB</li><li>Sveavägen 120, Stockholm</li><li><a href="tel:+46101234500">010-123 45 00</a></li><li><a href="kontakt.html">Kontakta oss</a></li></ul></div>
   </div>
-  <div class="fbot"><span>© 2026 Nordbild AB</span><span>Foton: Pexels</span><span>Integritetspolicy · Cookies · Tillgänglighet</span></div>
+  <div class="fbot"><span>© 2026 Nordbild AB</span><span>Foton: Pexels</span><span><a href="hero-forslag.html">Hero-förslag</a> · Integritetspolicy · Cookies</span></div>
  </div>
 </footer>
 
-<script>
-let y=0;const h=document.getElementById('hdr');
-addEventListener('scroll',()=>{const n=scrollY;h.classList.toggle('hide',n>y&&n>200);y=n});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('on');
- e.target.querySelectorAll('[data-n]').forEach(b=>{const t=+b.dataset.n,s=performance.now();(function f(n){const p=Math.min((n-s)/1600,1);b.textContent=Math.round(t*(1-Math.pow(1-p,3))).toLocaleString('sv-SE');if(p<1)requestAnimationFrame(f)})(s)});
- io.unobserve(e.target)}),{threshold:.15});
-document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
-document.querySelectorAll('.menu a').forEach(a=>a.onclick=()=>document.getElementById('menu').classList.remove('open'));
-</script>
+<script src="main.js"></script>
 </body>
 </html>
