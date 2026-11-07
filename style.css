@@ -25,7 +25,7 @@ header.hide{transform:translateY(-100%)}
 @keyframes zoom{to{transform:scale(1)}}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,39,30,.15) 30%,rgba(8,39,30,.8))}
 .hero .in{position:absolute;z-index:2;left:40px;right:40px;bottom:48px;display:flex;justify-content:space-between;align-items:flex-end;gap:60px}
-.hero h1{font-weight:400;font-size:clamp(56px,8.6vw,132px);line-height:.98;letter-spacing:-.03em;max-width:1000px}
+.hero h1{font-weight:500;font-size:clamp(58px,8.6vw,136px);line-height:.98;letter-spacing:-.035em;max-width:none;flex:1}
 .hero p{font-size:20px;max-width:400px;font-weight:400;opacity:.92}
 /* sections */
 section{padding:120px 0}
@@ -171,3 +171,5 @@ form.contact .full{grid-column:1/-1}
 .hbtn span{transition:.25s}.hbtn:hover{background:#fff}.hbtn:hover span{transform:translateX(4px)}
 .hbtn.o{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.8)}.hbtn.o:hover{background:#fff;color:var(--green-d)}
 .feature .eyebrow{color:var(--mint)}
+.hero .hr{flex:none;width:400px}@media(max-width:1000px){.hero .hr{width:auto}}
+.hero .in{gap:40px}.hero .hr{width:360px}
